@@ -35,5 +35,7 @@ def splited_show(imgPath,factor, isSave = False):
             axs[j][i].set_axis_off()
             axs[j][i].imshow(pic[a])
             if isSave:
-                imageio.imsave(imgPath + str(i) + str(j) + ".jpg", pic[a])
+                imageio.imsave(imgPath.split('/')[-2] + "/" + imgPath.split('/')[-1].split('.')[0] + str(i) + str(j) + ".jpg", pic[a])
             a += 1
+
+splited_show('../image_test/img1.jpg', 2, True)
