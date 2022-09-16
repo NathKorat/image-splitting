@@ -1,9 +1,11 @@
+from genericpath import isdir
 import os
 import argparse
 from splitting import split_img
 import json
 import matplotlib.pyplot as plt
 import numpy as np
+import imageio
 
 pargser = argparse.ArgumentParser()
 
@@ -29,19 +31,24 @@ for i in range(len(os.listdir(base_path))):
     a = 0
     for x in range(arg.factor):
         for y in range(arg.factor):
-            test[os.listdir(base_path)[i] + str(x) + str(y) + '.jpg'] = np.array(arr_tem[a]).tolist()
+            test[os.listdir(base_path)[i] + str(x) + str(y) + '.jpg'] = np.array(arr_tem[a])
             a += 1
 
 print(np.array(test[list(test.keys())[0]]))
     
-with open('image_data.json', 'w') as file:
-    json.dump(test, file)
-
-#
+#to visualize image from
 def visual(arr):
     plt.imshow(arr)
     plt.show()
 
-# visual(test[list(test.keys())[0]])
 
-print(test)
+#save images
+if ~(os.path.isdir('/splited')):
+    os.makedirs('splited')
+
+for i in range(len(list(test.keys()))):
+    imageio.imsave("splited/" + list(test.keys())[i], test[list(test.keys())[i]])
+
+
+
+# visual(test[list(test.keys())[0]])
