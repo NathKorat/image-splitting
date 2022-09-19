@@ -38,4 +38,3 @@ def splited_show(imgPath,factor, isSave = False):
             if isSave:
                 imageio.imsave(imgPath.split('/')[-2] + "/" + imgPath.split('/')[-1].split('.')[0] + str(i) + str(j) + ".jpg", pic[a])
             a += 1
-print(np.shape(split_img('../image_test/img1.jpg', 2)))
