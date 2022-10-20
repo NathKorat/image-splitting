@@ -4,3 +4,8 @@
 *jpeg
 *.json
 *.pyc
+
+venv
+
+.ipynb*
+
