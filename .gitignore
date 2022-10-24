@@ -9,3 +9,5 @@ venv
 
 .ipynb*
 
+*.pt
+runs
