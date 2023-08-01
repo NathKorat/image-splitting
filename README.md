@@ -1,4 +1,5 @@
 # image-splitting
+<hr>
 To split one image into small piece with custom factorial clusters. We made this for adjusting images splitting to enhance the pre-processing in machine learning.
 
 ## How to Run Code
