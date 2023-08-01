@@ -11,3 +11,5 @@ After clone the project to your local machine, you can run it by using either ju
     python main.py -p <img_folder> -f <amnount of img> -o <folder_to_store_image>
 
 _You can check <a href="https://github.com/NathKorat/image-splitting/blob/main/learning_scipy_numpy.ipynb">splitting_img.ipynb</a> as example._
+
+Have Fun!
